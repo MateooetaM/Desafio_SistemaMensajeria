@@ -4,19 +4,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --nav: #FFF;
+    --border: #BEC1BB;
+    --bg: #E8EBE4;
+    --title: #1B1F21;
+    --text: #000;
+    --button: #A491D2;
+    --hover: #CDC3E6;
+    --white: #fff;
+    --estado: #828485;
+}
+
 main {
     display: flex;
 }
 
 nav {
-    background-color: #fff;
-    padding: 1rem 2rem;
+    background-color: var(--nav);
     width: 15%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    border-right: solid 1px var(--border);
 }
 
 nav ul {
@@ -31,8 +43,9 @@ nav a {
 .container{
     display: flex;
     align-items: center;
-    
-    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-bottom: solid 1px var(--border);
+    width: 100%;
 }
 
 .container img {
@@ -47,9 +60,10 @@ nav a {
     display: flex;
 }
 
+
 .menu {
     margin-left: 3.6rem;
-    color: #BEC1BB ;
+    color: var(--border) ;
 }
 
 .menu i {
@@ -62,24 +76,33 @@ nav a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-size: 0.8rem;
+    color: var(--text)
 }
 
 .content-user p {
     font-size: 0.6rem;
-    color: #BEC1BB;
+    color: var(--border);
 }
 
 .button{
     display: flex;
-    margin-bottom: 2rem;
+    padding: 2rem 2rem;
+    border-bottom: solid 1px var(--border);
+    width: 100%;
+    justify-content: center;
 }
 
 .button button {
     
     padding: 1rem 3rem;
-    background-color:#A491D2;
+    background-color: var(--button);
     color:#fff;
     font-size: 0.8rem;
+    border: none;
+}
+
+.button button:hover {
+    background-color: var(--hover);
 }
 
 .contact img {
@@ -95,13 +118,16 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    
 }
 
 .contact-personal {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 1.5rem;
+    border-bottom: solid 1px var(--border);
+    padding: 1rem 2rem;
+    width: 100%;
 }
 
 .contact-personal h4 {
@@ -120,7 +146,7 @@ nav a {
 section {
     width: 85%;
     padding: 3rem;
-    background-color: #e8ebe4;
+    background-color: var(--bg);
     display: flex;
     justify-content: center;
     align-items: center;
